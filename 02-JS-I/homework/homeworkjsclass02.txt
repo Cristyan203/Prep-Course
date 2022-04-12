@@ -1,0 +1,269 @@
+Henry Challenge
+Homework: Introducción a Javascript
+Por: Cristian Alexis Garces Valencia.
+Correo: cristyanop7@gmail.com - cristyanop78@outlook.es
+
+Punto 1.
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+-Variables
+-Strings
+-Funciones (argumentos, return)
+-Declaraciones if
+-Valores booleanos (true, false)
+
+Solucion del punto 1:
+¿Que es una variable?
+-'Variables': Las variables se usan para guardar valores  que luego vamos a usar dentro de nuestro codigo js en otro momemto para que este pueda ser operado en una operacion o expresion matematica que hayamos elejido asignandole el nombre clave a esta variable que nosotros escojamos, hay 3 formas de llamarla "var", "let" y "const". 
+expliquemoslas:
+variable "var":
+Esta es una forma de llamar una variable mas comun o conocida para mi aunque tambien se usa de una manera muy facil y tambien se opera muy sencillamente solo le asignamos el nombre que nosotros escojamos y asignamos el valor que vayamos a poner y este quedaria con ese valor hasta que lo cambiemos nuevamente.
+aqui un ejemplo:
+
+>var ejemplo1 = 12
+
+y nos deberia devolver el valor que le hemos asignado
+asi:
+<12.
+
+y podemos operar esta variable con otros valores numericos
+"Debo dejar en claro que las variables tambien llevan tipos de datos tales como lo son: string, numerico o boolean". Esto lo explicare mas adelante
+ entonces podemos sumar esta variable con valores numericos con otros valores numericos asi:
+ 
+> ejemplo1 + 5
+y deberia devolvernos el resultado de esta operacion;
+< 17
+
+tambien lo podemos usar asi mismo en restas, multiplicaciones o divisiones, tal como en este caso:
+
+> ejemplo1 * 2
+y nos devolveria ciomo resultado
+< 24
+
+tambien podemos asignar una variable de esta forma: "No Recomendado"
+
+> ejemplo2 = 5
+y quedaria con el valor que acabamos de asignar que seria
+
+> 5 
+
+Siguiente:
+Variable "const"
+Esta variable se usa para asignar un valor ala variable pero que a diferencia de "var" el valor que le asignemos no se puede cambiar en una siguiente ocasion.
+
+const sinCambiosPib = 3,1416;
+ 
+y el interprete de este idioma asigna ese valor a esta variable y ya en siguiente ocasiones no se podra cambiar este valor.
+aqui intentamos hacer un cambio.
+
+const sinCambiosPib = 29;
+
+si damos enter y ejecutamos este cambio deberia arrojarnos un error que seria mas o menos asi:
+
+>"Uncaught TypeError: Assignment to constant variable."
+
+Y no se podria realizar el cambio
+
+Siguiente
+Variable "let"
+Variable parecida a "var" pero esta se comporta de manera un poco distinta ya que por decirlo asi limitamos a los scopes que no sean tan globales en todo el codigo si no que funcione correctamente en la funcion
+que estamos ejecutando.
+Que es un scope? explicacion "Breve":
+El scope es la variable que queremos que se ejecute dentro de nuestra funcion y que este tenga la limitacion de solo correrse dentro de esta funcion y si la funcion no es citada para hacer una operacion entonces esta variable no podria ser usada, por decirlo asi esta variable "let" es para que este scope solo este adentro de la funcion que se esta ejecuntandose y si la quieres llamar por fuera debes declarar una nueva variable
+
+Tipos de datos de variables "Mas comunes":
+-strings
+-Numerico
+-Boolean
+
+A Las variables se le pueden asignar que tipo de valor queremos que tengan si son valores strings "que al usar este estamos indicando al interprete de este lenguaje que el valor que este va son letras o palabras entre comillas para que se diferencia de otro tipo de dato".
+ejemplo:
+
+> var stringejemplo = 'hola'
+y al llamarla el lenguaje nos arroja en la consola lo que este tiene dentro de si
+
+> stringsejemplo
+< "hola" 
+
+Este tipo de dato a diferencia del numerico no se le pueden hacer operaciones matematicas porque son palabras y el interprete no podria resolverlo arrojaria error o
+pasaria esto:
+
+> stringsejemplo + 1
+< 'hola1'
+
+siguiente tipo de dato:
+numerico
+Este a diferencia del strings no empieza ni termina en comilla lo cual el interprete lo leeria como numeros y estos si se puden operar:
+
+> var numero = 2;
+< 2
+
+y hacemos una operacion "*":
+
+> numero * 5;
+y nos da el resultado
+< 10
+
+Juega con el codigo y correlo con diferentes operadores a ver que pasa "Este interprete va resolviendo las expresiones desde el operador con mas complejidad al mas sencillo".
+
+Los boolean los explicare mas adelante.
+
+Funciones
+Hay varias formas de ejecutar funciones y en este caso pues voy a hablar de 3, entonces comenzemos!:.
+forma 1:
+>function ejemploSumaForma1 (a, b){
+	//micodigo
+	console.log (a + b);
+}  
+esta funcion es la forma mas sencilla de usar ya que solo le asignamos un nombre ala funcion que en este caso seria "ejemploSumaForma1" y entonces cada vez que queramos hacer uso de esta funcion solo la llamariamos y como le asignamos que debe sumar los 2 valores que ingresemos entonces debe devolvernos el resultado de la operacion
+"console.log" seria mas que todo como para que nos devuelva en la misma consola el valor de la operacion que ejecutamos.
+
+Entonces seria algo tipo asi: 
+
+asignamos los valores en la funcion: 
+
+>ejemploSumaForma1 (15,20)
+
+y nos devolveria este resultado:
+<35
+
+podemos hacer operaciones con mas operadores como los son "+, -, *, /". LOS MISMOS DE LA CALCULADORA
+Solo debemos jugar un poco con el codigo y ejecutarlo.
+como en el siguiente ejemplo:
+
+>function ejemploSumaForma1 (a, b, c, d){
+	console.log (a + b - c * d);
+} 
+
+y asignamos lo valores que queramos asi:
+ 
+>ejemploSumaForma1 (2, 4, 3, 6)
+
+y el resultado deberia de devolvernos este resultado
+
+< -12
+
+este resultado por la ley de signos de "matematicas" ya que primero resulve el operador de mayor complejidad y va despejando el problema de lo mas dificil a lo mas facil.
+
+segunda forna "Alertas"
+Este lo ejecutamos y nos va a imprimir en la pantalla del navegador una alerta con el mensaje que le hayamos asignado entre parentesis. aqui un ejemplo:
+
+>alert ('Hola, amigos!') 
+
+En el navegador deberiamos ver el mensaje que asignamos:
+
+forma 3 "prompt"
+Con esta vas a poder enviar una ventana emergente con un mensaje que hayamos asignamos y un espacio para que se pueda poner al texto o el valor que se le pida si especificamos en nuestro mensaje que debe depositar un tipo de dato, aqui un ejemplo:
+
+>prompt('Hola, Porfavor deposita tu nombre.')
+
+Arroja la ventana emergente con el mensaje y el espacio para depositar el valor y este valor nos lo arroja en la consola.
+
+Ahora hablaremos de los argumentos.
+Argumentos
+Los argumentos por decirlo asi son otra variable "dentro" de la funcion en el cual agregariamos el valor cuando la llamemos, como en el siguiente ejemplo:
+
+>function saluda(nombre) {
+    console.log('Hola, ' + nombre);
+}
+
+>saluda('Martin');
+
+aqui primero declaramos nuestra funcion agregamos su palabra clave y entre los parentesis el argumento y ponemos la codificacion entre los corchetes que va a estar adentro ejecutandose, luego llamamos la funcion y dentro de parentesis ponemos el valor que debe llevar en este caso la variable dentro de la funcion se llamo "nombre" y le asignamos el valor "Martin" y deberia de devolvernos en la consola 
+
+<Hola, martin
+
+Lo mismo se puede hacer con operaciones matematicas solo hay que interpretar el codigo saber como se lee y jugar con sus variables hay que hacerlo con practica:
+
+>function suma(a,b) {
+    console.log( a + b);
+}
+
+>suma(2,3);
+
+Y cuando la llamamos debe arrojar el resultado que seria:
+
+<5
+
+"Return"
+Este a diferencia que console.log nos sirve para que en donde estemos manejando nuestros codigos cuando llamemos a la funcion nos devuelva lo que hayamos asignado, solo para operaciones.
+
+>function suma(a,b) {
+    return (a + b);
+}
+<undefined
+
+>suma(2,3)
+
+y nos devolvera el resultado 
+
+<5
+
+Declaraciones "If":
+Este se usa para decir que si "if" se cumple la condicion que le hayamos asignado entonces se ejecute el codigo entre corchetes "{}" y si no "else is" entonces que verifique esta otra condicion y si se cumple se ejecute este otro codigo entre los corchetes y si tampoco se cumple "else" ejecute el ultimo.
+como en este ejemplo de verificacion si eres mayor de edad:
+
+>var edad = 19;
+
+< undefined
+
+>if (edad <18){
+	console.log('Eres menor de edad')
+}	else if (edad > 18){
+	console.log('eres mayor de edad')
+}
+eres mayor de edad
+>undefined
+
+Otro ejemplo seria el siguiente:
+
+>function NumeroMayora50(paso1){
+	if (paso1 < 49){
+	return false;
+}	else if (paso1 > 51){
+	return true;
+}   else if (paso1 == 50){ 
+	var empato='Es igual'; 
+	return empato;
+} else {console.log('error')
+}
+}
+
+En el cual expreso que debe poner un numero mayor a 50 cuando se llame esta funcion y que si el numero ingresado es menor a 49 debe arrojar como resultado Falso, si el valor ingresado es mayor a 51 debe arrojar verdadero, si es igual un mensaje de es igual y si no se cumple ninguna de mis condiciones arroje de mensaje error.
+
+Tipo de dato:
+Boolean
+Este nos arroja como resultado si es tipo "true o false" estos provienen de la logica boolean, este lo usan bastante en los numero binarios lo que dice que si es "1" es true o activo y si es "0" false o negativo.
+En Javascript usamos booleanos para significar verdadero o falso.
+Ejemplo:
+
+>50 < 70
+< true
+
+>80 > 20
+<true
+
+>100 < 10
+<false
+
+>20 > 200
+<false
+
+>var boolean = 5;
+<undefined
+
+>boolean < 4;
+<false
+
+>boolean > 3;
+<true
+
+y para comparar lo hacemos con "==" por que si usamos solo 1 definira ese valor a esa variable como lo vimos anteriormente en la explicacion de las variables.
+ejemplo de comparacion:
+
+>boolean == 3;
+<false
+
+>boolean == 5;
+<true
+
+Fin.
