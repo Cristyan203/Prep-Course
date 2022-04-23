@@ -1,0 +1,130 @@
+Henry Challenge
+Homework: Javascript2.
+Por: Cristian Alexis Garces Valencia.
+Correo: cristyanop7@gmail.com - cristyanop78@outlook.es
+
+Punto 1
+Bucle "For"
+Este nos sirve para no ser tan repetitivos en nuestro codigo con lineas de comandos que se ejecuten repetitivamente entonces para evitar esto utilizamos el bucle for 
+que este nos repetiria el codigo mientras la condicion sea "true", usan una sintaxis muy similar a "if" pero con algunas especificaciones mas. Despues que hayamos declarado
+el bucle "for" en la funcion 'Si queremos que este en una funcion' en los paresentesis toca especificar 3 cosas: 
+-1.Declarar la variable."En la cual se ira repitiendo el bucle".
+-2.La condicion que exijamos.
+-3.En esta incrementariamos la variable con el nombre que le asignamos y dos operadores de suma ejemplo:"a++". 'operacion abreviada en JS'
+
+Claro todo esto dentro de los parentesis y cada una de estas ira separada por punto y coma ";". y dentro de las llaves un codigo que haga la accion que queremos hacer.
+
+Aqui un ejemplo para saber como usar este primer tipo de "bucle".
+en este codigo gracias a el bucle "for" vamos a asignar un numero a una variable, que se incremente hasta que llegue ala condicion que le asignamos y un console.log para
+que nos imprima en la pantalla la lista que le pedimos.
+
+>for (var a= 1;a<=30;a++){
+	console.log('a')
+}
+
+Nos debere de arrojar un listado de los numeros hasta que nuestra variable haya llegado a ese tope que asignamos en la condicion en este caso 30.
+Tambien este bucle lo podemos usar con una funcion y esta debera de comportarse igual al llamar la funcion.
+En el argumento de la funcion ponemos la variable hasta la cual va a llegar nuestro listado.
+
+>function prueba(n) {
+	for (var a= 1;a<=n;a++){
+	console.log('a')
+}
+}
+
+y al llamarla
+
+prueba(1540);
+
+y nos arrojaria el listado hasta ese numero "En los parentesis cuando llamamos la funcion ponemos es el numero hasta el cual queremos que llegue el listado".
+Si queremos podemos aumentar al codigo que solamente nos imprima numeros pares, tal como en el siguiente ejemplo.
+
+>function prueba(n) {
+	for (var a= 1;a<=n;a++){
+	if(a%2===0){
+	console.log('a')
+}
+}
+}
+
+Y La consola nos devolveria un listado solo de numeros pares y tambien como acabamos de observar este bucle podemos anidarlo a otras palabras reservadas o sentencias tal como "if":
+
+>function prueba(n) {
+	for (var a= 1;a<=n;a++){
+	if(a%2===0){
+	console.log('a')
+}	if (a>200){
+		for (var i=0; i <=10;i++){
+		console.log('i')
+		}
+		return;
+	}
+}
+}
+
+En este anterior codigo acabamos de especificar dar la instruccion al lenguaje que debe hacer 2 listas 1de numeros pares hasta que se cumpla la condicion que nosotros pusimos "En este caso que cuando llegue a 'n' cantidad de numeros, pare el listado".
+y otra que dice que si nuestro llega a ser superior a "200" entonces muestre un listado del 0 al 10.
+ 
+Operadores Logicos:
+Los operadores logicos son formas como de combinar y verificar dos expresiones si estas dos son "true" o una de ellas es "false" y nos devolvera el resultado para saberlo.
+
+Primer operador '&&'
+Este revisa las dos expresiones tanto como la que esta a la izquierda como tanto a la que esta a la derecha y si ambas son "true" el codigo se ejecutara si no, no se ejecutara.
+ejemplo:
+
+>if (2000 > 30 && 2 === 2) {
+    console.log('este código se ejecutará');
+}
+
+Como vemos las dos expresiones son ciertas y el codigo si se ejecutara
+Pero si una de las dos expresiones no es cierta:
+
+>if (14 === 9 && 310 > 9) {
+    console.log('este código no se ejecutará');
+}
+
+El codigo no se ejecutara
+
+Segundo operador '||'
+Este operador tambien opera las dos expresiones del lado derecho como la del lado izquiero y esta si Ambas o una de las dos expresiones es cierta el codigo se ejecutara,
+pero si las dos son "false" no se correra nuestro codigo.
+ejemplo:
+if (100 > 10 || 10 === 10) {
+    console.log('este código se ejecutará');
+}
+
+Este codigo se ejecutara ya que ambas expresiones son ciertas.
+
+if (10 === 9 || 10 > 9) {
+    console.log('este código se ejecutará');
+}
+
+Este tambien se ejecutara porque 1 de las dos expresiones es cierta.
+
+if (10 === 9 || 1 > 9) {
+    console.log('este código no se ejecutará');
+}
+
+Este codigo a diferencia de los demas no se ejecutara por que las dos expresiones fueron fallidas y no se ejecutara.
+
+Tercer operador '!'
+Este operador a diferencia de los demas al ponerlo en una sola expresion este la negara y al ejecutarse la operacion este arrojara si es "true o no". por ejemplo;
+
+>!2>4
+<true
+
+Este resultado seria porque al usar el operador logico de negacion estariamos negando la expresion y diciendo que no es asi "Al usar este operador diriamos que estamos negando que esa expresion no es cierta 2 no es mayor que 4".
+y por eso el resultado "True".
+otro ejemplo:
+
+>!2>6
+<true
+
+En este nos arroja ese resultado porque estamos usando  el signo de negacion y diriamos que no es cierto que 2 no vale mas que 6, y por eso el resultado.
+ultimo ejemplo:
+
+>!4===4
+<false
+
+y en este ejemplo nos arroja ese resultado ya que estamos usando el signo de comparacion y el de negacion y estariamos diciendo algo como "No es cierto que 4 vale igual que 4" y entonces por eso el lenguaje nos arroja ese resultado.
+Fin!.
